@@ -84,6 +84,8 @@ if ( isset($_POST['action']) && !empty($_POST['action']) ) {
 
 /*
 
+RESIDUAL CODE TESTS TO DELETE
+
 {"to":"bqyfi2qcm","data":[{"6":{"value":"Joe"},"8":{"value":"Blogs"},"9":{"value":"joe.bloggs5631@example.com"},"13":{"value":"435-454-3358"},"14":{"value":"Very interested in mastering solidity. Guys, please keep up the great work!"},"15":{"value":"I agree"},"18":{"value":"helloWorld"}}],"fieldsToReturn":[6,8,9,13,14,15,1,18]}
 
 var headers = {
@@ -167,7 +169,7 @@ function create ( $table_fields ){
        // $key = hash( 'md5', $result['data'][0][23]['value'] . $result['data'][0][9]['value'] );
         //echo hash('md5', 'The quick brown fox jumped over the lazy dog.');
 
-        $formatted_date = date('l, F j, Y @ g:i A',  strtotime( '-5 hours', strtotime($result['data'][0][1]['value'])) );
+        $formatted_date = date('l, F j, Y @ g:i A', strtotime($result['data'][0][1]['value']) );
 
         $name_phone_msg = array( 
 
@@ -185,7 +187,7 @@ function create ( $table_fields ){
 
         $server_response = $sms_payload->get_sms();
 
-       print_r( json_decode( $server_response['content'], true ) ); //TODO Remove when live
+       //print_r( json_decode( $server_response['content'], true ) ); //TODO Remove when live
 
         $sms_payload::save_file( LOG_FILE, $server_response['content'] );
 
@@ -229,6 +231,8 @@ function update($table_fields){
 
     if( isset($_SESSION['user_id']) ) {
 
+        $key = hash( 'md5', mt_rand(17464,99999) . $table_fields['email'] );
+
         $payload = array(
             'to' => TABLE_ID_USERS, //table_id
             'data' => array( 
@@ -246,7 +250,7 @@ function update($table_fields){
                     15=>array( 'value' => $table_fields['accept_terms']), 
                     20=>array( 'value' => $table_fields['role']),
                     21=>array( 'value' => $table_fields['practice_areas']), 
-                    23=>array( 'value' => mt_rand(17464,99999) ),
+                    23=>array( 'value' => $key ),
                 )
             ),
     
@@ -275,7 +279,7 @@ function update($table_fields){
 
         #var_dump ($result);
 
-        $formatted_date = date('l, F j, Y @ g:i A',  strtotime( '-5 hours', strtotime($result['data'][0][2]['value'])) );
+        $formatted_date = date('l, F j, Y @ g:i A', strtotime($result['data'][0][2]['value']) );
 
         echo '<div class="row"><div class="col">
         <a class="btn-sm btn-success" href="update.php" role="button">Update Profile</a>
@@ -413,11 +417,16 @@ function deleteAccount(){
 
     $results = $_SESSION['instance']->set_delete_record( $payload_array );
 
-    print_r( json_decode( $_SESSION['instance']->get_delete_record()['content'], true ) );
+    echo '<div class="bd-callout bd-callout-success"><div class="check"><h5 class="pull-left">Success, ' . $_SESSION['name'] . '!</h5></div><p>Your profile was succesfully deleted. Feel free to reach out if you ever need us!</p></div>';
+
+/*
+    var_dump( $results );
+    print_r( $results);
+
+    $results = json_decode( $results, true );
 
     if ($results['numberDeleted'] == 1){
-        echo '<div class="bd-callout bd-callout-success"><div class="check"><h5 class="pull-left">Success, ' . $_SESSION['name'] . '!</h5></div><p>Your profile was succesfully deleted. Feel free to reach out if you ever need us!</p></div>';
-
+        
 
     } else{
 
@@ -425,7 +434,7 @@ function deleteAccount(){
 
     }
 
-
+*/
 
     session_destroy();
 

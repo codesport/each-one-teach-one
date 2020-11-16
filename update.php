@@ -208,7 +208,7 @@ require_once 'header-basic.php';
                             <option value="Science or Engineering or IT or HealthCare" >Science or Engineering or IT or HealthCare</option>
                         <?php endif ?>   
                         <?php if ( !in_array( 'Sports or Hospitality or Entertainment', $practices_array ) ) : ?>    
-                            <option value="Sports or Hospitality or or Entertainment">Sports or Hospitality or Entertainment</option>
+                            <option value="Sports or Hospitality or Entertainment">Sports or Hospitality or Entertainment</option>
                         <?php endif ?>   
                         <?php if ( !in_array( 'Finance or Real Estate or Accounting', $practices_array ) ) : ?>    
                             <option value="Finance or Real Estate or Accounting">Finance or Real Estate or Accounting</option>

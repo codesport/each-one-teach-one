@@ -218,7 +218,7 @@ $(document).ready(function(){
             if ( errors == 0 ){
                 
                // $('#server-output').hide()
-               console.log($('#login').serialize() )
+              // console.log($('#login').serialize() )
     
                 $.ajax({//http://stackoverflow.com/a/16531545/946957
 
