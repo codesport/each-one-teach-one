@@ -1,0 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# private files and notes
+private-notes.txt
+*.psd
+*.txt
+*.zip
+*.svg
+/trash
+/stream*
+*key*
+/assets
+api.php
+/src/vendor
+# dependencies
+
+
+# testing
+
+
+# production
+
+
+# misc
+.DS_Store
+__MACOSX
+
