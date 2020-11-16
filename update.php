@@ -201,17 +201,17 @@ require_once 'header-basic.php';
                         <?php foreach ($practices_array as $key=> $value) : ?>
                             <option value="<?php echo $value ?>" selected><?php echo $value ?></option>
                         <?php endforeach ?>
-                        <?php if ( !in_array( 'Freelance, Gig Economy, or Part-time', $practices_array ) ) : ?>    
-                            <option value="Freelance, Gig Economy, or Part-time">Freelance, Gig Economy, or Part-time</option>
+                        <?php if ( !in_array( 'Freelance or Gig Economy or Part-time', $practices_array ) ) : ?>    
+                            <option value="Freelance or Gig Economy or Part-time">Freelance or Gig Economy or Part-time</option>
                         <?php endif ?>
-                        <?php if ( !in_array( 'Science, Engineering IT or HealthCare', $practices_array ) ) : ?>    
-                            <option value="Science, Engineering, IT, or HealthCare" >Science, Engineering, IT, or HealthCare</option>
+                        <?php if ( !in_array( 'Science or Engineering or IT or HealthCare', $practices_array ) ) : ?>    
+                            <option value="Science or Engineering or IT or HealthCare" >Science or Engineering or IT or HealthCare</option>
                         <?php endif ?>   
-                        <?php if ( !in_array( 'Sports, Hospitality, or Entertainment', $practices_array ) ) : ?>    
-                            <option value="Sports, Hospitality, or Entertainment">Sports, Hospitality, or Entertainment</option>
+                        <?php if ( !in_array( 'Sports or Hospitality or Entertainment', $practices_array ) ) : ?>    
+                            <option value="Sports or Hospitality or or Entertainment">Sports or Hospitality or Entertainment</option>
                         <?php endif ?>   
-                        <?php if ( !in_array( 'Finance, Real Estate, or Accounting', $practices_array ) ) : ?>    
-                            <option value="Finance, Real Estate, or Accounting">Finance, Real Estate or Accounting</option>
+                        <?php if ( !in_array( 'Finance or Real Estate or Accounting', $practices_array ) ) : ?>    
+                            <option value="Finance or Real Estate or Accounting">Finance or Real Estate or Accounting</option>
                         <?php endif ?> 
                         <?php if ( !in_array( 'None of the above', $practices_array ) ) : ?>    
                             <option value="None of the above">None of the above</option>

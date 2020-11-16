@@ -182,7 +182,7 @@ require_once 'header-basic.php';
 
                 <div class="form-group">
                     <label for="practice-areas">Which industries are you interested in or currently involved with?</label>
-                    <select multiple="" class="form-control" id="practice-areas" name="practice_areas[]" required disabled>
+                    <select size="5" multiple="" class="form-control" id="practice-areas" name="practice_areas[]" required disabled>
                         <?php foreach ($practices_array as $key=> $value) : ?>
                             <option value="<?php echo $value ?>" selected><?php echo $value ?></option>
                         <?php endforeach ?>     

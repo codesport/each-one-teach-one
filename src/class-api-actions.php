@@ -7,8 +7,6 @@
  * 
  * @package Hackathons: 2020 Quick Base @link https://quickbase.devpost.com
  * 
- * @link https://developer.tdameritrade.com/content/phase-1-authentication-update-xml-based-api
- * @link https://developer.tdameritrade.com/content/simple-auth-local-apps
  * 
  */
 
@@ -20,8 +18,6 @@ const USER_TOKEN    = 'b5r9qe_pdyr_ckzfamscj47mcvd6nq47efjqkwx';
 const QB_REALM      = 'hackathon20-mb';
 const USER_AGENT    = 'php-apps';
 const END_POINT     = 'https://api.quickbase.com/v1/';
-//const APP_ID        = 'bqx3i69a4';
-
 
 
 /**
@@ -115,7 +111,6 @@ class Quickbase_Actions {
         exit;
     
     }
-
 
 
 }

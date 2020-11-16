@@ -38,10 +38,24 @@ require_once 'header-basic.php';
 
 
                     
-<p>Each One, Teach One is a proof of concept social initiative. Our goal is to improve race relations in the US by giving people the opportunity to network, connect, and befriend with local small business owners.</p>
+<p>Each One, Teach One is a proof of concept social initiative. Its goal is to improve race relations in the US by giving people the opportunity to network, connect, and befriend African American and Latino small business owners.</p>
 
-<p>Small business owners (weather they be medical professionals or restaurant owners are able to host live online talks, demos, and events to members of Each One, Teach One. </p>
+<p>Small business owners (weather they be medical professionals or restaurant owners) now have a platform where there voices can be amplified and heard. 
     
+<p>In the near future we want to enable small business owners to host live online talks, demos, and events for members of Each One, Teach One. </p>
+<hr>
+<?php if ( isset($_SESSION['user_id']) ) : ?>
+
+    <a class="btn-sm btn-success" href="update.php" role="button">Update Profile</a>
+    <a class="btn-sm btn-primary" href="read.php" role="button">View Profile</a>
+    <a class="btn-sm btn-warning" href="logout.php" role="button">Log Out Profile</a>
+    <a class="btn-sm btn-danger" href="delete.php" role="button">Delete Profile</a>
+
+<?php else : ?>
+    <a class="btn-sm btn-success" href="login.php" role="button">Login</a>
+    <a class="btn-sm btn-primary" href="create.php" role="button">Create a Profile</a>
+
+<?php endif ?>    
 </div>
 </div>
 </div>

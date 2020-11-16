@@ -379,7 +379,7 @@ function login ($table_fields, $confirm_delete=false){
             echo'
             <h4>Email and Password Verification Failed</h4>
             <div class="bd-callout bd-callout-danger">
-                <div class="bang"><p class="pull-right">Looks like your email and password aren\'t in our system. We\'ll add a password reset feature shortly. In the meantime give us a call and we\'ll help you out!</p>
+                <div class="bang"><p class="pull-right">Looks like your email and password aren\'t in our system. We\'ll add a password reset feature shortly. In the meantime try <a href="login.php"><b>logging on</b></a> again</p>
                 </div>                            
             <div>';
 

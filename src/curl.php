@@ -28,7 +28,7 @@
  * @return array   $header.  Error number, error message, or page content. 
  *
  * @package Social Good Tools: Quick Base Hackathon
- * @version   July 14, 2017
+ * @version   November 10, 2020
  * @since 	  November 10, 2020
  */
 
@@ -37,27 +37,8 @@ function get_web_page( $url, $header_send=[],  $redirects=10 ) {
     $user_agent = 'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36';
 
 	/**
-	* Spoof client IP
-	*
-	* On July 14, 2017 @link https://www.sec.gov/cgi-bin/browse-edgar stopped accepting connects from
-	* localhosts with IPs of 192.168.0.x 
-	*
-	* After process of elimination, it was determined that SEC is filtering on 'HTTP_CLIENT_IP'. 
-	* Apparently, HTTP_CLIENT_IP can be easily spoofed. Not sure about'REMOTE_ADDR'. According
-	* to @link https://stackoverflow.com/a/55790/946957 $_SERVER['REMOTE_ADDR']cannot be set by 
-	* the user.
-	*
     */
-    /*
-	$header_send += array( 
-		#'X-Forwarded-For: 152.3.43.145',
-		#'Referer: https://duke.edu',
-		#'REMOTE_ADDR: 152.3.43.145',
-		#'HTTP_X_FORWARDED_FOR: 152.3.43.145',
-		'HTTP_CLIENT_IP: 000.000.000.000',
 
-	);
-*/
    // var_dump ($header_send ); exit;
 
     $options = array(
@@ -100,8 +81,6 @@ function get_web_page( $url, $header_send=[],  $redirects=10 ) {
  *	Call with post_web_page( $url, $post_fields [, $redirects] )
  * 
  * Based on C:\wamp\www\projects\floatshrink\inc\login.php
- *
- * @since December 9, 2015
  *
  * @link http://stackoverflow.com/a/21169961/946957 (login and download file)
  * @link http://stackoverflow.com/a/14953910 (curl get)

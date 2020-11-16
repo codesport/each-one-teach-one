@@ -22,7 +22,15 @@
 <html lang="en" class="no-js">
   <!-- Head -->
   <head>
-    <title><?php echo ucfirst( basename( $_SERVER["SCRIPT_FILENAME"], '.php' ) ) ?> | Each One, Teach One</title>
+    <title><?php 
+    
+    if ( basename( $_SERVER["SCRIPT_FILENAME"] ) != 'index.php' ) { 
+        echo ucfirst( basename( $_SERVER["SCRIPT_FILENAME"], '.php' ) );
+      } else { 
+          echo 'Welcome to Your Community'; 
+      } 
+      
+      ?> | Each One, Teach One</title>
 
     <!-- Meta -->
     <meta charset="utf-8"/>
@@ -81,7 +89,7 @@
       <!-- Navbar -->
       <nav class="js-navbar-scroll navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">
+          <a class="navbar-brand" href="/">
             <img class="img-responsive" src="images/logo-557x100.png" alt="Each One, Teach One">
           </a>
 
@@ -119,7 +127,7 @@
             <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link active" href="app-about.php">About</a>
               </li>
-
+<!--
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link active" href="app-admin.php">Connect With Others</a>
               </li>
@@ -137,6 +145,7 @@
               </li>
             </ul>
             <div>
+    -->
               <a class="btn btn-primary" href="app-logout.php">
                 <i class="fas fa-sign-out mr-1"></i> Logout
               </a>

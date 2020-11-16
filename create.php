@@ -134,10 +134,10 @@ require_once 'header-basic.php';
                 <div class="form-group">
                 <label for="practice-areas">Which industries are you interested in or currently involved with?</label>
                     <select size="5" multiple="" class="form-control" id="practice-areas" name="practice_areas[]" required>
-                        <option value="Freelance, Gig Economy, or Part-time">Freelance, Gig Economy, or Part-time</option>
-                        <option value="Science, Engineering, IT, or HealthCare" >Science, Engineering, IT, or HealthCare</option>
-                        <option value="Sports, Hospitality, or Entertainment">Sports, Hospitality, or Entertainment</option>
-                        <option value="Finance, Real Estate, or Accounting">Finance, Real Estate, or Accounting</option>
+                        <option value="Freelance or Gig Economy or Part-time">Freelance or Gig Economy or Part-time</option>
+                        <option value="Science or Engineering or IT or HealthCare" >Science or Engineering or IT or HealthCare</option>
+                        <option value="Sports or Hospitality or Entertainment">Sports or Hospitality or Entertainment</option>
+                        <option value="Finance or Real Estate or Accounting">Finance or Real Estate or Accounting</option>
                         <option value="None of the above">None of the above</option>
                     </select>
                     <div id="practice_areas-feedback" class="invalid-feedback"></div>
