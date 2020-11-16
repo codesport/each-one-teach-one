@@ -178,8 +178,8 @@ function create ( $table_fields ){
         );
 
         require_once 'class-vonage.php';
-        define( LOG_FILE, SECURE_PATH . '/sms-log.txt' );
 
+        define( 'LOG_FILE', SECURE_PATH . '/sms-log.txt' );
 
         $sms_payload = New Vonage( $name_phone_msg );
 
